@@ -11,31 +11,27 @@ public class HandCheck : MonoBehaviour
         float currentRotationY = transform.rotation.eulerAngles.y;
         Debug.Log(currentRotationY);
 
-        // 1. ƒAƒNƒVƒ‡ƒ“1‚ªs‚í‚ê‚½ê‡‚ÌğŒ‚ğƒ`ƒFƒbƒN‚·‚é
+        // 1. ã‚¢ã‚¯ã‚·ãƒ§ãƒ³1ãŒè¡Œã‚ã‚ŒãŸå ´åˆã®æ¡ä»¶ã‚’ãƒã‚§ãƒƒã‚¯ã™ã‚‹
         if (currentRotationY > 3f && currentRotationY < 20f)
         {
-            // ƒAƒNƒVƒ‡ƒ“1‚ªs‚í‚ê‚½ê‡‚Ìˆ—‚ğÀs
-            // ‚±‚Ì—á‚Å‚ÍAƒAƒNƒVƒ‡ƒ“1‚ªs‚í‚ê‚½‚Æƒtƒ‰ƒO‚ğ‹L˜^
-            Debug.Log("ƒAƒNƒVƒ‡ƒ“1‚ğ‹N‚±‚·");
+            // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³1ãŒè¡Œã‚ã‚ŒãŸå ´åˆã®å‡¦ç†ã‚’å®Ÿè¡Œ
+            Debug.Log("ã‚¢ã‚¯ã‚·ãƒ§ãƒ³1ã‚’èµ·ã“ã™");
             action1Performed = true;
             action1Timestamp = Time.time;
         }
 
-        // 2. ƒAƒNƒVƒ‡ƒ“1‚ªs‚í‚ê‚Ä‚©‚ç2•bˆÈ“à‚ÅA‚©‚ÂğŒ‚ª–‚½‚³‚ê‚Ä‚¢‚éê‡AƒAƒNƒVƒ‡ƒ“2‚É„ˆÚ‚·‚é
+        // 2. ã‚¢ã‚¯ã‚·ãƒ§ãƒ³1ãŒè¡Œã‚ã‚Œã¦ã‹ã‚‰2ç§’ä»¥å†…ã§ã€ã‹ã¤æ¡ä»¶ãŒæº€ãŸã•ã‚Œã¦ã„ã‚‹å ´åˆã€ã‚¢ã‚¯ã‚·ãƒ§ãƒ³2ã«æ¨ç§»ã™ã‚‹
         if (action1Performed && (Time.time - action1Timestamp) <= 1f && currentRotationY < 357f && currentRotationY > 300f)
         {
-            // ƒAƒNƒVƒ‡ƒ“2‚Ö‚Ì„ˆÚˆ—‚ğ‚±‚±‚É‹Lq
+            // ã‚¢ã‚¯ã‚·ãƒ§ãƒ³2ã¸ã®æ¨ç§»å‡¦ç†ã‚’ã“ã“ã«è¨˜è¿°
             TransitionToAction2();
         }
     }
 
     void TransitionToAction2()
     {
-        // ƒAƒNƒVƒ‡ƒ“2‚Ö‚Ì„ˆÚˆ—‚ğ‚±‚±‚É‹Lq
-        Debug.Log("ƒAƒNƒVƒ‡ƒ“‚Q‚ğÀs");
+        Debug.Log("ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ï¼’ã‚’å®Ÿè¡Œ");
 
-        // „ˆÚŒã‚É•K—v‚Èˆ—‚ğ’Ç‰Á‚Å‚«‚Ü‚·
-        // —á‚¦‚ÎAƒtƒ‰ƒO‚âƒ^ƒCƒ€ƒXƒ^ƒ“ƒv‚ğƒŠƒZƒbƒg‚·‚é‚È‚Ç
         isAction2Executed = true;
         action1Performed = false;
         action1Timestamp = 0f;
