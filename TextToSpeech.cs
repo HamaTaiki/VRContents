@@ -44,7 +44,7 @@ public class TextToSpeech : MonoBehaviour
     }
 
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private string _apiKey = "AIzaSyDU29RUQ6woDkSntqz3N7nlEGmCW4gdVd8";
+    [SerializeField] private string _apiKey = "";
 
     private static readonly string s_apiUrl = "https://texttospeech.googleapis.com/v1/text:synthesize";
 
